@@ -1,0 +1,46 @@
+<div class="container">
+<form [formGroup]="companyDetails" (ngSubmit)="onSubmit()">
+  <div class="formcontrols">
+  <mat-form-field>
+    <input matInput placeholder="Company name" formControlName="companyName"  required>
+  </mat-form-field>
+<br/>
+  <mat-form-field>
+    <input matInput placeholder="Contact number " formControlName="contact"  required>
+  </mat-form-field>
+  <br/>
+
+
+  <mat-form-field>
+    <input matInput placeholder="Email address" formControlName="email"  required>
+  </mat-form-field>
+
+
+<div  formGroupName="address">
+  <h3>Address</h3>
+  <mat-form-field>
+    <input matInput placeholder="Country" formControlName="country"  required>
+  </mat-form-field>
+<span class="spacing"></span>
+  <mat-form-field>
+    <input matInput placeholder="City" formControlName="city"  required>
+  </mat-form-field>
+  <br/>
+
+  <mat-form-field>
+    <input matInput placeholder="State" formControlName="state"  required>
+  </mat-form-field>
+  <span class="spacing"></span>
+  <mat-form-field>
+    <input matInput placeholder="Zip" formControlName="zip"  required>
+  </mat-form-field>
+
+  </div>
+  <button type="submit" mat-raised-button color="primary" [disabled]="!companyDetails.valid">Save Details</button>
+
+</div>
+</form>
+<p>
+  Form Status: {{ companyDetails.status }}
+</p>
+</div>

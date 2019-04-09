@@ -1,0 +1,14 @@
+.formcontrols{
+   text-align: center;
+   width: 50%;
+   border: 2px #000000 solid;
+}
+.container{
+    text-align: -webkit-center;
+    padding: 15px;
+}
+.spacing {
+    width: 15px;
+    height: 5px;
+    display: inline-block;
+ }
